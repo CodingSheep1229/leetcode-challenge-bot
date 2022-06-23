@@ -1,0 +1,11 @@
+CREATE TABLE daily_challenge (
+    id SERIAL PRIMARY KEY,
+    member_name VARCHAR(255) NOT NULL,
+    report_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE subscription (
+    member_name VARCHAR(255) PRIMARY KEY NOT NULL,
+    remind_time INTEGER NOT NULL DEFAULT 20,
+    condemn_time INTEGER NOT NULL DEFAULT 23
+);
